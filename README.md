@@ -1,4 +1,6 @@
 # periodic-notifier
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/vajahath/periodic-notifier.svg)](https://greenkeeper.io/)
 A CLI to notify you something periodically.
 
 ## Install
