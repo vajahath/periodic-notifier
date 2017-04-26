@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var program = require('commander');
 var lme = require('lme');
 var ms = require('ms');
@@ -10,8 +12,6 @@ var parseDuration = function(val) {
 
 var TITLE = 'Periodic Notifier';
 var ICON = path.join(__dirname, 'time.jpg');
-
-lme.h(ICON);
 
 program
 	.version('1.0.0')
@@ -28,7 +28,6 @@ if (!program.interval ||
 	lme.e("both --interval (3h, 2h etc) and --message ('this is a message!') options are required")
 	process.exit(1);
 } else {
-	lme.w(program.sound);
 	// periodic function
 	setInterval(function() {
 		notifier.notify({
