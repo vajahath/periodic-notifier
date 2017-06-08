@@ -1,5 +1,5 @@
 # periodic-notifier
-A CLI to notify you something periodically.
+A tool to notify you something periodically.
 
 ## Install
 ```
