@@ -4,7 +4,11 @@ import * as program from 'commander';
 import * as notifier from 'node-notifier';
 import ms = require('ms');
 import { join } from 'path';
+import * as updateNotifier from 'update-notifier';
 import * as packageDetails from '../package.json';
+
+// notify to update
+updateNotifier({ pkg: packageDetails }).notify();
 
 const parseDuration = (val: string): number => {
 	return ms(val);

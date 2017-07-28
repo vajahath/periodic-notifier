@@ -14,7 +14,7 @@ A CLI to notify you something periodically
 ```
 npm i -g periodic-notifier
 ```
-
+#### How it looks?
 ![periodic-notifier in action](media/feed_cat.png)
 
 ## Usage
@@ -50,7 +50,7 @@ Following are the values you can use with `-I` or `--interval` option:
 - '1y'
 - '100' (milliseconds)
 
-## Examples
+## Example
 ```
 periodic-notifier -I 5s -T "Feed the cat" -M "Because they are awesome.." -W
 ```
@@ -58,7 +58,8 @@ periodic-notifier -I 5s -T "Feed the cat" -M "Because they are awesome.." -W
 ## Change log
 - v1.1.0
   - bug fix with icon
-  - works in more node versions
+  - works in more node versions.
+  - notifies if a new version of the cli is available
   - better docs
 - v1.0.0
   - initial release

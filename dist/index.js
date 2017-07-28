@@ -5,7 +5,10 @@ var program = require("commander");
 var notifier = require("node-notifier");
 var ms = require("ms");
 var path_1 = require("path");
+var updateNotifier = require("update-notifier");
 var packageDetails = require("../package.json");
+// notify to update
+updateNotifier({ pkg: packageDetails }).notify();
 var parseDuration = function (val) {
     return ms(val);
 };
@@ -13,7 +16,7 @@ var TITLE = 'Periodic Notifier';
 var ICON = path_1.join(__dirname, '/../images/time.png');
 program
     .version(packageDetails.version)
-    .option('-I --interval <time>', 'Interval at which the notification should be fired.', parseDuration)
+    .option('-I --interval <time>', 'Interval at which the notification should be fired. To know more about time formats see docs.', parseDuration)
     .option('-T --title [title]', 'Title of the message')
     .option('-M --message <message>', 'Actual message')
     .option('-C --icon <icon>', 'absolute path to icon.png')
