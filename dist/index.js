@@ -4,17 +4,19 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var program = require("commander");
 var notifier = require("node-notifier");
 var ms = require("ms");
+var path_1 = require("path");
+var packageDetails = require("../package.json");
 var parseDuration = function (val) {
     return ms(val);
 };
 var TITLE = 'Periodic Notifier';
-var ICON = '../images/time.png';
+var ICON = path_1.join(__dirname, '/../images/time.png');
 program
-    .version('1.0.0')
+    .version(packageDetails.version)
     .option('-I --interval <time>', 'Interval at which the notification should be fired.', parseDuration)
     .option('-T --title [title]', 'Title of the message')
     .option('-M --message <message>', 'Actual message')
-    .option('-IC --icon <icon>', 'absolute path to icon.png')
+    .option('-C --icon <icon>', 'absolute path to icon.png')
     .option('-S --sound', 'set this flag to make sound')
     .option('-W --wait', 'set this flag to wait the notification')
     .parse(process.argv); // end with parse to parse through the input
