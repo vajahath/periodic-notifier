@@ -17,7 +17,7 @@ program
 	.version(packageDetails.version)
 	.option(
 		'-I --interval <time>',
-		'Interval at which the notification should be fired.',
+		'Interval at which the notification should be fired. To know more about time formats see docs.',
 		parseDuration,
 	)
 	.option('-T --title [title]', 'Title of the message')
